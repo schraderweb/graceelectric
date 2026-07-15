@@ -21,5 +21,5 @@ const html = partials
   .map(file => fs.readFileSync(path.join(src, file), 'utf-8'))
   .join('\n');
 
-fs.writeFileSync(path.join(__dirname, '..', 'index.html'), html);
-console.log('Built index.html');
+fs.writeFileSync(path.join(__dirname, 'index.html'), html);
+console.log('Built demo/index.html');

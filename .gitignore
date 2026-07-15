@@ -1,5 +1,5 @@
 node_modules/
-index.html
+demo/index.html
 .DS_Store
 /tmp/
 .playwright-mcp/
