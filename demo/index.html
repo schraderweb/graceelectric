@@ -1,0 +1,597 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Grace Electric | Commercial & Residential Electrical Services</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/demo/css/style.css" />
+  </head>
+  <body>
+
+    <!-- Mobile Topbar -->
+    <div class="mobile-topbar">
+      <a href="tel:17145123456" class="topbar-phone">
+        <i class="bi bi-telephone-fill"></i>
+        (714) 512-3456
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <i id="hamIcon" class="bi bi-list"></i>
+      </button>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="mobile-drawer" id="drawer">
+      <div class="drawer-header">
+        <span class="drawer-logo">GRACE ELECTRIC</span>
+        <button class="close-btn" id="closeBtn" aria-label="Close">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+      <ul class="drawer-nav">
+        <li><button class="m-nav-btn" onclick="window.location='/'">Home</button></li>
+        <li><button class="m-nav-btn" onclick="window.location='#'">Residential</button></li>
+        <li><button class="m-nav-btn" onclick="window.location='#'">Commercial</button></li>
+        <li><button class="m-nav-btn" onclick="window.location='#'">About Us</button></li>
+        <li><button class="m-nav-btn" onclick="window.location='#'">Contact</button></li>
+      </ul>
+      <div class="drawer-phone">
+        <a href="tel:17145123456" class="drawer-phone-link">
+          <i class="bi bi-telephone-fill"></i>
+          (714) 512-3456
+        </a>
+      </div>
+    </div>
+
+    <!-- Main Nav -->
+    <nav class="main-nav">
+      <ul>
+        <li class="nav-spacer" aria-hidden="true"></li>
+        <li class="nav-links-group">
+          <button class="nav-btn" onclick="window.location='/'">Home</button>
+          <button class="nav-btn" onclick="window.location='#'">Residential</button>
+          <button class="nav-btn" onclick="window.location='#'">Commercial</button>
+          <button class="nav-btn" onclick="window.location='#'">About Us</button>
+          <button class="nav-btn" onclick="window.location='#'">Contact</button>
+        </li>
+        <li class="nav-phone">
+          <a href="tel:17145123456" class="nav-phone-link">
+            <i class="bi bi-telephone-fill"></i>
+            (714) 512-3456
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+
+      <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+      <section class="hero-section">
+        <div class="hero-bg"></div>
+        <div class="container-fluid hero-inner">
+          <div class="row align-items-start gx-2">
+
+            <!-- Left Content -->
+            <div class="col-md-8 col-12">
+              <div class="right-side-section me-md-5 me-0 ms-md-4 ms-0 px-3 px-md-0">
+
+                <div class="logo-wrapper mt-5">
+                  <div class="logo" style="background-image: url('/demo/images/ge-logo.svg');"></div>
+                </div>
+
+                <h1 class="hero-title mb-3">
+                  <span class="hero-title-text">
+                    Orange County's <span>Trusted</span> Electrical Experts
+                  </span>
+                </h1>
+
+                <h3 class="hero-subtitle">
+                  Family-owned and serving Southern California with premium
+                  residential & commercial electrical services. Licensed, bonded, and ready when you are.
+                </h3>
+
+              </div>
+            </div>
+
+            <!-- Right Form -->
+            <div class="col-md-4 col-12 mt-4 mt-md-0">
+              <div class="form-container mt-5">
+                <div class="appointment-card p-4">
+                  <h5 class="text-center mb-1">Book Your</h5>
+                  <div class="text-center mb-3">
+                    <span class="appointment-pill d-inline-block">Appointment Now</span>
+                  </div>
+                  <form>
+                    <div class="row g-2">
+                      <div class="col-6">
+                        <input class="form-control rounded-input" placeholder="First Name *" />
+                      </div>
+                      <div class="col-6">
+                        <input class="form-control rounded-input" placeholder="Last Name *" />
+                      </div>
+                    </div>
+                    <div class="row g-2 mt-2">
+                      <div class="col-6">
+                        <input class="form-control rounded-input" placeholder="Phone Number *" />
+                      </div>
+                      <div class="col-6">
+                        <input type="email" class="form-control rounded-input" placeholder="Email Address *" />
+                      </div>
+                    </div>
+                    <div class="mt-2">
+                      <input class="form-control rounded-input" placeholder="Zip Code *" />
+                    </div>
+                    <div class="mt-2">
+                      <select class="form-select rounded-input">
+                        <option value="" selected disabled>How Did You Hear About Us?</option>
+                        <option value="facebook">Facebook</option>
+                        <option value="google-search">Google Search</option>
+                        <option value="google-ad">Google Ad</option>
+                        <option value="referral">Referral</option>
+                        <option value="nextdoor">Nextdoor</option>
+                        <option value="other">Other</option>
+                      </select>
+                    </div>
+                    <div class="mt-2">
+                      <textarea class="form-control rounded-input" rows="4" placeholder="How Can We Help You?"></textarea>
+                    </div>
+                    <div class="mt-2">
+                      <select class="form-select rounded-input">
+                        <option value="" selected disabled>Book An Appointment?</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No (Reach Out To Schedule)</option>
+                      </select>
+                    </div>
+                    <div class="mt-3">
+                      <button type="button" class="btn btn-danger w-100 btn-cta">START BOOKING NOW</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════ ABOUT / COMPANY ═══════════════════════════ -->
+      <section class="company-section overflow-hidden">
+        <div class="container-fluid p-0">
+          <div class="row g-0" style="position: relative;">
+
+            <div class="col-lg-5 company-img-col"></div>
+
+            <div class="col-lg-7 offset-lg-5 about-content-bg py-5 px-4 px-lg-5 d-flex align-items-center">
+              <div class="about-card py-4">
+                <h2 class="section-title mb-4">
+                  Orange County Electrician With A <br>
+                  Reputation <span class="trust-pill">You Can Trust.</span>
+                </h2>
+
+                <div class="content-text opacity-90">
+                  <p>Finding an electrician you can rely on shouldn't be a gamble. Too many homeowners have stories about shoddy wiring, missed appointments, and shockingly high bills.</p>
+                  <p>Grace Electric is different. We're the <strong>polar opposite</strong>.</p>
+                  <p>We're not a national electrical conglomerate that treats you like a number. We're a local, family-owned Orange County business that takes pride in every outlet, panel, and fixture we install. <strong>Licensed. Insured. Bonded. And built on faith.</strong></p>
+                  <p>It's why we're passionate about doing every job the RIGHT WAY — code-compliant wiring, premium materials, and honest upfront pricing. PERIOD.</p>
+                  <p>But don't take our word for it. Here's proof we're the local electrician you can TRUST:</p>
+                </div>
+
+                <div class="row text-center mt-5 g-4 justify-content-center">
+                  <div class="col-6 col-md-3">
+                    <div class="stat-container">
+                      <div class="stat-circle">25+</div>
+                      <div class="stat-label">Years Serving <br> Orange County</div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-3">
+                    <div class="stat-container">
+                      <div class="stat-circle">500+</div>
+                      <div class="stat-label">5-Star <br> Online Reviews</div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-3">
+                    <div class="stat-container">
+                      <div class="stat-circle">3K+</div>
+                      <div class="stat-label">Projects <br> Completed</div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-3">
+                    <div class="stat-container">
+                      <div class="stat-circle">A+</div>
+                      <div class="stat-label">Better Business <br> Bureau Rating</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mt-5 d-flex flex-wrap align-items-center gap-4">
+                  <a href="#" class="btn btn-contact-custom">
+                    CONTACT US <span class="ms-2">→</span>
+                  </a>
+                  <span class="fs-5 text-navy">or Call <strong style="color:var(--color-accent);">(714) 512-3456</strong></span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════ REVIEWS CAROUSEL ═══════════════════════════ -->
+      <div class="review-sec text-center py-5">
+        <h1 class="text-white mb-2">Our Recent Reviews</h1>
+        <p class="review-sec-sub">What our Orange County customers are saying</p>
+
+        <div class="review-carousel-outer">
+
+          <button class="review-arrow review-prev" id="reviewPrev">&#8249;</button>
+          <button class="review-arrow review-next" id="reviewNext">&#8250;</button>
+
+          <div class="review-track" id="reviewTrack">
+
+            <div class="review-card">
+              <div class="review-header">
+                <div class="avatar" style="background-color:#ea4335;">L</div>
+                <div class="user-info">
+                  <span class="user-name">Linda M.</span>
+                  <span class="review-date">2 weeks ago</span>
+                </div>
+                <img src="https://img.icons8.com/color/48/google-logo.png" class="google-logo" alt="Google">
+              </div>
+              <div class="stars">★★★★★</div>
+              <p class="review-text">Our entire panel needed upgrading. Grace Electric was prompt, professional, and the price was exactly what they quoted. No surprises. Highly recommend!</p>
+            </div>
+
+            <div class="review-card">
+              <div class="review-header">
+                <div class="avatar" style="background-color:#34a853;">M</div>
+                <div class="user-info">
+                  <span class="user-name">Mark R.</span>
+                  <span class="review-date">1 month ago</span>
+                </div>
+                <img src="https://img.icons8.com/color/48/google-logo.png" class="google-logo" alt="Google">
+              </div>
+              <div class="stars">★★★★★</div>
+              <p class="review-text">Had them rewire our entire kitchen remodel. Clean work, passed inspection first try, and the crew was super respectful of our home. Will use again.</p>
+            </div>
+
+            <div class="review-card">
+              <div class="review-header">
+                <div class="avatar" style="background-color:#4285f4;">S</div>
+                <div class="user-info">
+                  <span class="user-name">Sofia C.</span>
+                  <span class="review-date">3 weeks ago</span>
+                </div>
+                <img src="https://img.icons8.com/color/48/google-logo.png" class="google-logo" alt="Google">
+              </div>
+              <div class="stars">★★★★★</div>
+              <p class="review-text">Honest pricing and great communication. They showed up on time and finished ahead of schedule. Our new recessed lighting looks amazing!</p>
+            </div>
+
+            <div class="review-card">
+              <div class="review-header">
+                <div class="avatar" style="background-color:#fbbc05;">D</div>
+                <div class="user-info">
+                  <span class="user-name">David P.</span>
+                  <span class="review-date">2 months ago</span>
+                </div>
+                <img src="https://img.icons8.com/color/48/google-logo.png" class="google-logo" alt="Google">
+              </div>
+              <div class="stars">★★★★★</div>
+              <p class="review-text"><b>Local Guide</b> · Lost power in half our house. They diagnosed the problem in minutes and had everything working again the same day. True pros.</p>
+            </div>
+
+            <div class="review-card">
+              <div class="review-header">
+                <div class="avatar" style="background-color:#7c3aed;">R</div>
+                <div class="user-info">
+                  <span class="user-name">Rachel K.</span>
+                  <span class="review-date">3 months ago</span>
+                </div>
+                <img src="https://img.icons8.com/color/48/google-logo.png" class="google-logo" alt="Google">
+              </div>
+              <div class="stars">★★★★★</div>
+              <p class="review-text">From the estimate to the final walkthrough, everything was seamless. They installed a whole-house surge protector and EV charger. Flawless work.</p>
+            </div>
+
+            <div class="review-card">
+              <div class="review-header">
+                <div class="avatar" style="background-color:#0891b2;">J</div>
+                <div class="user-info">
+                  <span class="user-name">James T.</span>
+                  <span class="review-date">6 weeks ago</span>
+                </div>
+                <img src="https://img.icons8.com/color/48/google-logo.png" class="google-logo" alt="Google">
+              </div>
+              <div class="stars">★★★★★</div>
+              <p class="review-text">Got three quotes and Grace Electric was not only the most competitive but also the most thorough in their walkthrough. Three months later, zero issues.</p>
+            </div>
+
+            <div class="review-card">
+              <div class="review-header">
+                <div class="avatar" style="background-color:#059669;">T</div>
+                <div class="user-info">
+                  <span class="user-name">Teresa N.</span>
+                  <span class="review-date">1 week ago</span>
+                </div>
+                <img src="https://img.icons8.com/color/48/google-logo.png" class="google-logo" alt="Google">
+              </div>
+              <div class="stars">★★★★★</div>
+              <p class="review-text">Emergency call on a Saturday and they still showed up within two hours. Fixed a dangerous short circuit and even tightened a few loose outlets for free.</p>
+            </div>
+
+          </div>
+
+          <div class="review-dots" id="reviewDots"></div>
+
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════ PROJECTS CAROUSEL ═══════════════════════════ -->
+      <section class="modern-carousel-section">
+        <div class="mb-2"><h1>Our Latest Projects</h1></div>
+
+        <div class="carousel-outer">
+
+          <div class="carousel-wrapper" id="carouselWrapper">
+
+            <div class="project-card">
+              <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=400&q=80" alt="Electrical Panel Upgrade">
+              <div class="card-content">
+                <span class="tag" style="background:#fbbf24;color:#000;">Panel Upgrade</span>
+                <h3>200A Panel Upgrade</h3>
+                <p>Full main panel replacement with surge protection for a modern Orange County home.</p>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&q=80" alt="EV Charger Installation">
+              <div class="card-content">
+                <span class="tag" style="background:#38bdf8;color:#000;">EV Charging</span>
+                <h3>EV Charger Installation</h3>
+                <p>Level 2 Tesla and J1776 charger install with dedicated 50A circuit in Irvine.</p>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <img src="https://images.unsplash.com/photo-1464146072230-91cabc968266?w=400&q=80" alt="Recessed Lighting">
+              <div class="card-content">
+                <span class="tag" style="background:#f87171;color:#fff;">Lighting</span>
+                <h3>Recessed Lighting Retrofit</h3>
+                <p>20 new LED wafer lights with dimmer switches for a full kitchen remodel.</p>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=400&q=80" alt="Commercial Wiring">
+              <div class="card-content">
+                <span class="tag" style="background:#4ade80;color:#000;">Commercial</span>
+                <h3>Retail Store Rewire</h3>
+                <p>Complete electrical redesign for a 3,000 sq ft retail space in Costa Mesa.</p>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?w=400&q=80" alt="Generator Installation">
+              <div class="card-content">
+                <span class="tag" style="background:#a78bfa;color:#fff;">Backup Power</span>
+                <h3>Whole-Home Generator</h3>
+                <p>Generac 22kW standby generator with automatic transfer switch installation.</p>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=400&q=80" alt="Smart Home Wiring">
+              <div class="card-content">
+                <span class="tag" style="background:#fb923c;color:#fff;">Smart Home</span>
+                <h3>Smart Home Automation</h3>
+                <p>Integrated lighting control, motorized shades, and whole-home audio wiring.</p>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=400&q=80" alt="Outdoor Lighting">
+              <div class="card-content">
+                <span class="tag" style="background:#34d399;color:#000;">Outdoor</span>
+                <h3>Landscape & Security Lighting</h3>
+                <p>Low-voltage landscape lighting with motion sensors and timer controls.</p>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <img src="https://images.unsplash.com/photo-1598128558393-70ff21433be0?w=400&q=80" alt="Electrical Inspection">
+              <div class="card-content">
+                <span class="tag" style="background:#2dd4bf;color:#000;">Inspection</span>
+                <h3>Home Electrical Safety Check</h3>
+                <p>Comprehensive 200-point inspection identifying code violations and fire hazards.</p>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <img src="https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?w=400&q=80" alt="Ceiling Fan Installation">
+              <div class="card-content">
+                <span class="tag" style="background:#f43f5e;color:#fff;">Installation</span>
+                <h3>Ceiling Fan & Chandelier</h3>
+                <p>Custom chandelier mount and 4 new ceiling fans with remote controls.</p>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <img src="https://images.unsplash.com/photo-1623282033815-40b05d96c903?w=400&q=80" alt="Troubleshooting">
+              <div class="card-content">
+                <span class="tag" style="background:#fb923c;color:#fff;">Repair</span>
+                <h3>Circuit Breaker Troubleshooting</h3>
+                <p>Diagnosed and repaired recurring tripping issue on a 15-year-old panel.</p>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&q=80" alt="Sub Panel Install">
+              <div class="card-content">
+                <span class="tag" style="background:#60a5fa;color:#000;">Service</span>
+                <h3>Sub-Panel for ADU</h3>
+                <p>60-amp sub-panel installation for a new accessory dwelling unit in Santa Ana.</p>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <img src="https://images.unsplash.com/photo-1613732974759-6a9ca5cd3a16?w=400&q=80" alt="Wiring Repair">
+              <div class="card-content">
+                <span class="tag" style="background:#818cf8;color:#fff;">Safety</span>
+                <h3>Knob & Tube Replacement</h3>
+                <p>Full replacement of outdated wiring in a 1950s Laguna Beach home.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <button class="carousel-arrow arrow-prev" id="arrowPrev" onclick="slideCarousel(-1)">&#8249;</button>
+          <button class="carousel-arrow arrow-next" id="arrowNext" onclick="slideCarousel(1)">&#8250;</button>
+
+          <div class="carousel-dots" id="carouselDots">
+            <span class="dot active" onclick="goToSlide(0)"></span>
+            <span class="dot" onclick="goToSlide(1)"></span>
+            <span class="dot" onclick="goToSlide(2)"></span>
+            <span class="dot" onclick="goToSlide(3)"></span>
+            <span class="dot" onclick="goToSlide(4)"></span>
+            <span class="dot" onclick="goToSlide(5)"></span>
+            <span class="dot" onclick="goToSlide(6)"></span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════ REVIEW BADGES ═══════════════════════════ -->
+      <section class="review-section py-5 text-center">
+        <div class="container">
+          <h3 class="fw-bold mb-1 text-dark">Please leave a review for us on</h3>
+          <h2 class="display-6 fw-bold mb-5">
+            <span class="text-google">Google</span> | <span class="text-facebook">Facebook</span>
+          </h2>
+
+          <div class="d-flex justify-content-center align-items-center gap-4 flex-wrap">
+            <a href="#" class="review-badge google-ring" target="_blank">
+              <div class="inner-content">
+                <p class="mb-1">Review us<br>on</p>
+                <img src="https://www.gesi.org/wp-content/uploads/2024/08/google-logo-png-open-2000.png" alt="Google" width="50">
+              </div>
+            </a>
+
+            <a href="#" class="review-badge facebook-ring" target="_blank">
+              <div class="inner-content">
+                <p class="mb-1">Review us<br>on</p>
+                <img src="https://images.icon-icons.com/1826/PNG/512/4202107facebookfblogosocialsocialmedia-115710_115591.png" alt="Facebook" width="55">
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════ MAP ═══════════════════════════ -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53082.62774432904!2d-117.87597924610646!3d33.71848072094435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcdd1b1e0e1e0f%3A0x8a5e5c5e5a5f5e5d!2sSanta%20Ana%2C%20CA!5e0!3m2!1sen!2sus!4v1" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+      <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+      <footer class="footer-main text-white pt-5">
+        <div class="container pb-4">
+          <div class="row gy-5">
+
+            <!-- Logo & Social -->
+            <div class="col-lg-3">
+              <div class="mb-4">
+                <img src="/demo/images/ge-logo.svg" alt="Grace Electric Logo" class="img-fluid" style="max-height: 150px;">
+              </div>
+              <p class="small lh-base opacity-75">
+                Grace Electric is Orange County's premier electrical contractor serving residential and commercial clients. From panel upgrades and EV chargers to full rewires and smart home automation — we bring light to every project.
+              </p>
+              <div class="mt-4">
+                <h5 class="footer-heading">Follow Us</h5>
+                <div class="d-flex gap-2 mt-3">
+                  <a href="#" target="_blank" class="btn btn-facebook d-inline-flex align-items-center justify-content-center"><i class="bi bi-facebook"></i></a>
+                  <a href="#" target="_blank" class="btn btn-facebook d-inline-flex align-items-center justify-content-center"><i class="bi bi-linkedin"></i></a>
+                  <a href="#" target="_blank" class="btn btn-facebook d-inline-flex align-items-center justify-content-center"><i class="bi bi-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-lg-5 px-lg-5">
+              <h5 class="footer-heading">Quick Links</h5>
+              <div class="row mt-4">
+                <div class="col-6">
+                  <ul class="list-unstyled footer-list">
+                    <li><a href="#">Residential Electrical</a></li>
+                    <li><a href="#">Commercial Electrical</a></li>
+                    <li><a href="#">EV Charger Installation</a></li>
+                    <li><a href="#">Panel Upgrades</a></li>
+                    <li><a href="#">About Us</a></li>
+                  </ul>
+                </div>
+                <div class="col-6">
+                  <ul class="list-unstyled footer-list">
+                    <li><a href="#">Free Electrical Safety Check</a></li>
+                    <li><a href="#">Free Estimate</a></li>
+                    <li><a href="#">Emergency Service</a></li>
+                    <li><a href="#">Smart Home Wiring</a></li>
+                    <li><a href="#">Gallery</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <a href="tel:17145123456" class="footer-phone-cta mt-4 d-inline-flex align-items-center gap-2">
+                <i class="bi bi-telephone-fill"></i>
+                (714) 512-3456
+              </a>
+            </div>
+
+            <!-- Company Info & Hours -->
+            <div class="col-lg-4">
+              <div class="mb-5">
+                <h5 class="footer-heading">Company Info</h5>
+                <p class="small mt-4 opacity-75">
+                  2800 Main St, Ste 100<br>
+                  Santa Ana, CA 92705
+                </p>
+                <p class="small opacity-75">
+                  <a href="mailto:info@graceelectric.com" style="color: var(--color-text-light);">info@graceelectric.com</a>
+                </p>
+              </div>
+              <div>
+                <h5 class="footer-heading">Business Hours</h5>
+                <ul class="list-unstyled small mt-4 business-hours">
+                  <li><span>Mon:</span> <span>7:00 AM – 6:00 PM</span></li>
+                  <li><span>Tue:</span> <span>7:00 AM – 6:00 PM</span></li>
+                  <li><span>Wed:</span> <span>7:00 AM – 6:00 PM</span></li>
+                  <li><span>Thu:</span> <span>7:00 AM – 6:00 PM</span></li>
+                  <li><span>Fri:</span> <span>7:00 AM – 6:00 PM</span></li>
+                  <li><span>Sat:</span> <span>8:00 AM – 2:00 PM</span></li>
+                  <li><span>Sun:</span> <span>Emergency Only</span></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="copyright-bar py-3 mt-4">
+          <div class="container">
+            <div class="row align-items-center text-center text-md-start">
+              <div class="col-md-8">
+                <p class="mb-0 small">Copyright &copy; 2026 Grace Electric | Website by <b><a class="text-decoration-none text-warning" href="https://schrader.co/">Schrader Web Solutions</a></b></p>
+              </div>
+              <div class="col-md-4 text-md-end mt-2 mt-md-0">
+                <p class="mb-0 small"><a href="#" class="text-decoration-none text-white"> Privacy Policy</a>  | <a href="#" class="text-decoration-none text-white"> Terms & Conditions</a> </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/demo/js/main.js"></script>
+  </body>
+</html>

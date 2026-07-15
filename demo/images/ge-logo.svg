@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F59E0B"/>
+      <stop offset="100%" style="stop-color:#D97706"/>
+    </linearGradient>
+  </defs>
+  <circle cx="150" cy="150" r="145" fill="#1C1917" stroke="url(#gold)" stroke-width="6"/>
+  <circle cx="150" cy="150" r="130" fill="#292524"/>
+  <g transform="translate(150,130)">
+    <path d="M-70,10 L-10,-60 L10,-60 L70,10 L40,10 L10,-20 L10,60 L-10,60 L-10,-20 L-40,10 Z" fill="#D97706"/>
+    <path d="M-50,10 L-10,-30 L10,-30 L50,10 L30,10 L10,-10 L10,40 L-10,40 L-10,-10 L-30,10 Z" fill="#F59E0B"/>
+  </g>
+  <text x="150" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="28" fill="#D97706">GRACE</text>
+  <text x="150" y="238" text-anchor="middle" font-family="Arial, sans-serif" font-weight="300" font-size="18" fill="#D97706">ELECTRIC</text>
+</svg>
