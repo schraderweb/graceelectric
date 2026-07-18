@@ -675,15 +675,28 @@
         <div class="container">
           <h2 class="fw-bold text-center mb-4">Proudly serving all the areas listed below</h2>
           <div class="serving-areas-text">
-
-<b>Grand Traverse County</b> Traverse City - Garfield Charter Township - East Bay - Charter Township - Kingsley - Fife Lake<br />
-<b>Wexford County</b> Cadillac - Manton - Buckley - Haring - Charter Township - Mesick <br />
-            <b>Antrim County</b> Elk Rapids - Bellaire - Mancelona - Central Lake - Ellsworth<br />
-            <b>Manistee County</b> Manistee - Filer Charter Township - Onekama - Bear Lake - Kaleva<br />
-            <b>Missaukee County</b> Lake City - McBain - Merritt - Falmouth - Jennings<br />            
-
-
-            
+            <span>Traverse City</span> -
+            <span>Cadillac</span> -
+            <span>Kalkaska</span> -
+            <span>Frankfort</span> -
+            <span>Charlevoix</span> -
+            <span>Suttons Bay</span> -
+            <span>Petoskey</span> -
+            <span>Mackinaw City</span> -
+            <span>Grayling</span> -
+            <span>Gaylord</span> -
+            <span>Manistee</span> -
+            <span>Onekama</span> -
+            <span>Bear Lake</span> -
+            <span>Interlochen</span> -
+            <span>Elk Rapids</span> -
+            <span>Fife Lake</span> -
+            <span>Harbor Springs</span> -
+            <span>Glen Arbor</span> -
+            <span>Leland</span> -
+            <span>Empire</span> -
+            <span>Lake Ann</span> -
+            <span>Torch Lake</span>
           </div>
         </div>
       </section>
@@ -786,22 +799,29 @@
     <script src="/demo/js/main.js"></script>
 
     <script>
-      function initServiceMap() {
-        const serviceAreas = [
-          { county: "Grand Traverse", fips: "26055", area: "Traverse City",             lat: 44.7631, lng: -85.6206 },
-          { county: "Wexford",         fips: "26165", area: "Cadillac",                  lat: 44.2519, lng: -85.4012 },
-          { county: "Antrim",          fips: "26009", area: "Bellaire / Elk Rapids",     lat: 44.9731, lng: -85.2584 },
-          { county: "Manistee",        fips: "26101", area: "Manistee",                  lat: 44.2442, lng: -86.3240 },
-          { county: "Missaukee",       fips: "26113", area: "Lake City",                 lat: 44.3358, lng: -85.2132 }
-        ];
+      const serviceAreas = [
+        { county: "Grand Traverse", fips: "26055", area: "Traverse City",             lat: 44.7631, lng: -85.6206 },
+        { county: "Wexford",         fips: "26165", area: "Cadillac",                  lat: 44.2519, lng: -85.4012 },
+        { county: "Antrim",          fips: "26009", area: "Bellaire / Elk Rapids",     lat: 44.9731, lng: -85.2584 },
+        { county: "Manistee",        fips: "26101", area: "Manistee",                  lat: 44.2442, lng: -86.3240 },
+        { county: "Missaukee",       fips: "26113", area: "Lake City",                 lat: 44.3358, lng: -85.2132 }
+      ];
 
-        const map = new google.maps.Map(document.getElementById('map'), {
+      const centerLat = serviceAreas.reduce((s, a) => s + a.lat, 0) / serviceAreas.length;
+      const centerLng = serviceAreas.reduce((s, a) => s + a.lng, 0) / serviceAreas.length;
+
+      let mapsLoaded = false;
+
+      function initServiceMap() {
+        mapsLoaded = true;
+        const mapEl = document.getElementById('map');
+        if (!mapEl) return;
+
+        const map = new google.maps.Map(mapEl, {
           mapTypeId: 'roadmap'
         });
 
         const bounds = new google.maps.LatLngBounds();
-        const centerLat = serviceAreas.reduce((s, a) => s + a.lat, 0) / serviceAreas.length;
-        const centerLng = serviceAreas.reduce((s, a) => s + a.lng, 0) / serviceAreas.length;
 
         serviceAreas.forEach(location => {
           const marker = new google.maps.Marker({
@@ -876,6 +896,109 @@
           if (map.getZoom() > 8) map.setZoom(8);
         });
       }
+
+      function renderFallbackMap() {
+        if (mapsLoaded || typeof google !== 'undefined') return;
+        const mapEl = document.getElementById('map');
+        if (!mapEl) return;
+
+        const canvas = document.createElement('canvas');
+        canvas.width = mapEl.clientWidth || mapEl.parentElement.clientWidth || 800;
+        canvas.height = 520;
+        canvas.style.width = '100%';
+        canvas.style.height = '520px';
+        canvas.style.display = 'block';
+        mapEl.appendChild(canvas);
+
+        const ctx = canvas.getContext('2d');
+        const w = canvas.width, h = canvas.height;
+        const pad = 60;
+        const drawW = w - pad * 2;
+        const drawH = h - pad * 2;
+
+        const lats = serviceAreas.map(a => a.lat);
+        const lngs = serviceAreas.map(a => a.lng);
+        const minLat = Math.min(...lats) - 0.15;
+        const maxLat = Math.max(...lats) + 0.15;
+        const minLng = Math.min(...lngs) - 0.15;
+        const maxLng = Math.max(...lngs) + 0.15;
+
+        function toCanvas(lat, lng) {
+          const x = pad + ((lng - minLng) / (maxLng - minLng)) * drawW;
+          const y = pad + ((maxLat - lat) / (maxLat - minLat)) * drawH;
+          return { x, y };
+        }
+
+        /* background */
+        ctx.fillStyle = '#f0f4f8';
+        ctx.fillRect(0, 0, w, h);
+
+        /* grid lines */
+        ctx.strokeStyle = '#dce2ea';
+        ctx.lineWidth = 1;
+        for (let i = 0; i <= 4; i++) {
+          const x = pad + (i / 4) * drawW;
+          ctx.beginPath();
+          ctx.moveTo(x, pad);
+          ctx.lineTo(x, pad + drawH);
+          ctx.stroke();
+          const y = pad + (i / 4) * drawH;
+          ctx.beginPath();
+          ctx.moveTo(pad, y);
+          ctx.lineTo(pad + drawW, y);
+          ctx.stroke();
+        }
+
+        /* center crosshair */
+        const c = toCanvas(centerLat, centerLng);
+        ctx.strokeStyle = '#DC2626';
+        ctx.lineWidth = 2;
+        ctx.setLineDash([6, 4]);
+        ctx.beginPath();
+        ctx.moveTo(c.x - 20, c.y);
+        ctx.lineTo(c.x + 20, c.y);
+        ctx.moveTo(c.x, c.y - 20);
+        ctx.lineTo(c.x, c.y + 20);
+        ctx.stroke();
+        ctx.setLineDash([]);
+
+        ctx.fillStyle = '#DC2626';
+        ctx.font = 'bold 13px system-ui, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText('Service Area Centre', c.x, c.y + 38);
+
+        /* markers */
+        serviceAreas.forEach(a => {
+          const p = toCanvas(a.lat, a.lng);
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, 8, 0, Math.PI * 2);
+          ctx.fillStyle = '#EF4444';
+          ctx.fill();
+          ctx.strokeStyle = '#fff';
+          ctx.lineWidth = 2;
+          ctx.stroke();
+
+          ctx.fillStyle = '#1e293b';
+          ctx.font = 'bold 12px system-ui, sans-serif';
+          ctx.textAlign = 'center';
+          ctx.fillText(a.county, p.x, p.y - 16);
+          ctx.font = '11px system-ui, sans-serif';
+          ctx.fillStyle = '#64748b';
+          ctx.fillText(a.area, p.x, p.y + 24);
+        });
+
+        /* labels */
+        ctx.fillStyle = '#94a3b8';
+        ctx.font = '11px system-ui, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText('Northwest Lower Michigan · Service Area', w / 2, h - 10);
+        ctx.fillStyle = '#94a3b8';
+        ctx.font = '10px system-ui, sans-serif';
+        ctx.textAlign = 'right';
+        ctx.fillText('Map unavailable — interactive map requires a Google Maps API key', w - 10, 18);
+      }
+
+      setTimeout(renderFallbackMap, 3000);
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWFkc2FRIzJamD-jbq7motf2o7qo_CmS4&callback=initServiceMap"></script>
   </body>
