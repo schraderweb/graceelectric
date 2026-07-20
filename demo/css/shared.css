@@ -84,9 +84,10 @@ a { text-decoration: none; }
 }
 
 .main-nav > ul > li { position: relative; }
-.nav-logo           { display: flex; align-items: center; justify-content: flex-start; height: 100%; padding-left: 16px; }
-.nav-logo-link      { display: flex; align-items: center; height: 100%; text-decoration: none; }
-.nav-logo-img       { max-height: 56px; width: auto; display: block; }
+.nav-logo           { display: flex; align-items: flex-start; justify-content: flex-start; height: 100%; padding-left: 16px; position: relative; width: 160px; }
+.nav-logo-link      { display: block; text-decoration: none; width: 140px; height: 140px; position: absolute; top: 10px; z-index: 2000; transition: all .3s ease; }
+.main-nav.navbar-scrolled .nav-logo-link { width: 90px; height: 90px; top: 5px; }
+.nav-logo-img       { width: 100%; height: auto; display: block; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3)); transition: all .3s ease; }
 .nav-phone          { display: flex; justify-content: flex-end; }
 
 .nav-links-group {
