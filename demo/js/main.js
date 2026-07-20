@@ -180,4 +180,28 @@
     startAutoPlay();
   })();
 
+  /* ── Sticky Navigation ── */
+  const mainNav = document.querySelector('.main-nav');
+  const mobileBar = document.querySelector('.mobile-topbar');
+
+  function toggleNavScroll() {
+    const hero = document.querySelector('.hero-section');
+    
+    // If no dark hero section, always use the white scrolled nav
+    if (!hero) {
+      if (mainNav) mainNav.classList.add('navbar-scrolled');
+      if (mobileBar) mobileBar.classList.add('navbar-scrolled');
+      return;
+    }
+
+    // Only switch to white navbar once user scrolls past the hero section
+    const threshold = Math.max(100, hero.offsetHeight - 100);
+    const scrolled = window.scrollY > threshold;
+    if (mainNav) mainNav.classList.toggle('navbar-scrolled', scrolled);
+    if (mobileBar) mobileBar.classList.toggle('navbar-scrolled', scrolled);
+  }
+
+  window.addEventListener('scroll', toggleNavScroll);
+  toggleNavScroll();
+
 })();

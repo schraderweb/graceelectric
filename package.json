@@ -4,10 +4,12 @@
   "private": true,
   "scripts": {
     "build": "node demo/build.js",
-    "dev": "npx serve -p 3001",
-    "start": "npx serve -p 3001"
+    "dev": "npm run build && (chokidar 'demo/src/**/*.html' 'demo/css/**/*.css' -c 'npm run build' & browser-sync start --server --files 'demo/**/*.html, demo/**/*.css, demo/**/*.js' --port 3000)",
+    "start": "npm run dev"
   },
   "devDependencies": {
+    "browser-sync": "^3.0.0",
+    "chokidar-cli": "^3.0.0",
     "serve": "^14.2.0"
   }
 }
