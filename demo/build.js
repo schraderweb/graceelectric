@@ -4,7 +4,11 @@ const path = require('path');
 const src = path.join(__dirname, 'src');
 const out = __dirname;
 
-const partial = name => fs.readFileSync(path.join(src, name), 'utf-8');
+const partial = name => {
+  const content = fs.readFileSync(path.join(src, name), 'utf-8');
+  // Avoid duplicating newlines if content already has them
+  return `<!-- START: ${name} -->\n${content}\n<!-- END: ${name} -->`;
+};
 
 const pages = {
   'index.html': [
@@ -14,9 +18,6 @@ const pages = {
     '_about.html',
     '_expertise.html',
     '_reviews.html',
-    '_projects.html',
-    '_badges.html',
-    '_serving.html',
     '_projects.html',
     '_badges.html',
     '_serving.html',

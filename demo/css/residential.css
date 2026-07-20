@@ -140,13 +140,14 @@
 /* Residential Hero */
 .residential-hero {
   background: #FFFDF8;
-  padding-top: var(--nav-height);
+  padding-top: var(--mobile-nav-height);
   padding-bottom: 40px;
 }
 
 @media (min-width: 992px) {
   .residential-hero {
     min-height: 680px;
+    padding-top: var(--nav-height);
   }
 }
 
