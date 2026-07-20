@@ -1,4 +1,11 @@
 /* Homepage Hero */
+/* Hide the nav logo at the very top of the homepage (it appears when scrolled) */
+.main-nav:not(.navbar-scrolled) .nav-logo-link {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
 .hero-section { position: relative; min-height: var(--hero-height); padding-bottom: 40px; overflow: visible; }
 .hero-bg { position: absolute; inset: 0; background-image: url('/demo/images/hero-bg.webp'); background-size: cover; background-position: center; z-index: 0; }
 .hero-inner { position: relative; z-index: 2; padding-top: calc(var(--nav-height) + 30px); }
