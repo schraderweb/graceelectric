@@ -139,7 +139,7 @@ a.contact-text:hover {
   position: relative;
   min-height: 820px;
   background-color: #fdfbf7;
-  padding-top: var(--nav-height);
+  padding-top: var(--mobile-nav-height);
   padding-bottom: 40px;
   overflow: visible;
   display: flex;
@@ -186,6 +186,7 @@ a.contact-text:hover {
   .contact-hero-merged {
     overflow: hidden;
     min-height: 820px;
+    padding-top: var(--nav-height);
   }
 
   .contact-hero-merged .hero-content {
