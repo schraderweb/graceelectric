@@ -2,7 +2,9 @@
       <section class="hero-section" id="home">
         <div class="hero-bg"></div>
         <div class="container-fluid hero-inner">
-          <div class="row align-items-start gx-2">
+
+          <!-- ===== DESKTOP LAYOUT (hidden on mobile) ===== -->
+          <div class="row align-items-start gx-2 hero-desktop-layout">
 
             <!-- Left Content -->
             <div class="col-md-8 col-12">
@@ -22,7 +24,7 @@
 
                 <p class="hero-subtitle">
                   Family-owned and serving Wexford, Grand Traverse, Antrim, Manistee, and Missaukee counties with premium
-                  residential & commercial electrical services. Licensed, bonded, and ready when you are.
+                  residential &amp; commercial electrical services. Licensed, bonded, and ready when you are.
                 </p>
 
               </div>
@@ -86,5 +88,118 @@
             </div>
 
           </div>
+
+          <!-- ===== MOBILE LAYOUT (hidden on desktop) ===== -->
+          <div class="hero-mobile-layout">
+
+            <!-- Hero Image -->
+            <img src="/demo/images/hero-bg.webp"
+              class="hero-mobile-img"
+              alt="Grace Electric Service" />
+
+            <!-- Text Content -->
+            <div class="hero-mobile-content">
+              <h1 class="hero-mobile-title">
+                Let's Talk About<br>Your <em class="text-accent">Project.</em>
+              </h1>
+
+              <p class="hero-mobile-desc">
+                We're here to help with your electrical needs—big or small. Reach out today
+                and we'll get back to you as soon as possible.
+              </p>
+
+              <div class="hero-mobile-ctas">
+                <a href="tel:12319444519" class="btn-mobile-call">
+                  <i class="bi bi-telephone-fill"></i> CALL NOW (231) 944-4519
+                </a>
+                <a href="#mobile-estimate-form" class="btn-mobile-estimate">
+                  <i class="bi bi-envelope-fill"></i> REQUEST A FREE ESTIMATE
+                </a>
+              </div>
+            </div>
+
+            <!-- Contact Info Cards -->
+            <div class="hero-mobile-info-bar">
+              <div class="info-card-mobile">
+                <div class="info-card-icon"><i class="bi bi-telephone-fill"></i></div>
+                <h6>Call Us</h6>
+                <p>(231) 944-4519</p>
+                <a href="tel:12319444519" class="info-card-arrow">&rsaquo;</a>
+              </div>
+              <div class="info-card-mobile">
+                <div class="info-card-icon"><i class="bi bi-envelope-fill"></i></div>
+                <h6>Email Us</h6>
+                <p>graceelectric<br>@hotmail.com</p>
+                <a href="mailto:graceelectric@hotmail.com" class="info-card-arrow">&rsaquo;</a>
+              </div>
+              <div class="info-card-mobile">
+                <div class="info-card-icon"><i class="bi bi-clock-fill"></i></div>
+                <h6>Business Hours</h6>
+                <p>Mon – Fri: 8AM – 6PM<br>Saturday: Closed<br>Sunday: Closed</p>
+              </div>
+              <div class="info-card-mobile">
+                <div class="info-card-icon"><i class="bi bi-lightning-charge-fill"></i></div>
+                <h6>Emergency Service</h6>
+                <p>24/7 Electrical Service<br>Call Anytime</p>
+              </div>
+            </div>
+
+            <!-- Estimate Form -->
+            <div class="hero-mobile-form-section" id="mobile-estimate-form">
+              <div class="hero-mobile-form-card">
+                <h3 class="fw-bold mb-1">Request Your <span class="text-accent">Free Estimate</span></h3>
+                <form id="mobileAppointmentForm" action="/api/send-enquiry" method="POST">
+                  <div class="row g-3 mt-2">
+                    <div class="col-6">
+                      <input class="form-control rounded-input py-2" placeholder="First Name *" aria-label="First Name" name="firstName" required />
+                    </div>
+                    <div class="col-6">
+                      <input class="form-control rounded-input py-2" placeholder="Last Name *" aria-label="Last Name" name="lastName" required />
+                    </div>
+                  </div>
+                  <div class="row g-3 mt-1">
+                    <div class="col-6">
+                      <input class="form-control rounded-input py-2" placeholder="Phone Number *" aria-label="Phone Number" name="phone" type="tel" required />
+                    </div>
+                    <div class="col-6">
+                      <input type="email" class="form-control rounded-input py-2" placeholder="Email Address *" aria-label="Email Address" name="email" required />
+                    </div>
+                  </div>
+                  <div class="mt-3">
+                    <input class="form-control rounded-input py-2" placeholder="Zip Code *" aria-label="Zip Code" name="zip" required />
+                  </div>
+                  <div class="mt-3">
+                    <select class="form-select rounded-input py-2" aria-label="How Did You Hear About Us?" name="referral">
+                      <option value="" selected disabled>How Did You Hear About Us?</option>
+                      <option value="facebook">Facebook</option>
+                      <option value="google-search">Google Search</option>
+                      <option value="google-ad">Google Ad</option>
+                      <option value="referral">Referral</option>
+                      <option value="nextdoor">Nextdoor</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                  <div class="mt-3">
+                    <textarea class="form-control rounded-input py-2" rows="3" placeholder="How Can We Help You?" aria-label="How Can We Help You?" name="message"></textarea>
+                  </div>
+                  <div class="mt-3">
+                    <select class="form-select rounded-input py-2" aria-label="Book An Appointment?" name="appointment">
+                      <option value="" selected disabled>Book An Appointment?</option>
+                      <option value="yes">Yes</option>
+                      <option value="no">No (Reach Out To Schedule)</option>
+                    </select>
+                  </div>
+                  <div class="mt-4">
+                    <button type="submit" class="btn w-100 fw-bold py-3 btn-mobile-submit">SEND REQUEST</button>
+                  </div>
+                </form>
+                <div class="text-center mt-3 text-muted" style="font-size: 0.8rem;">
+                  <i class="bi bi-lock-fill me-1"></i> Your information is secure and will never be shared.
+                </div>
+              </div>
+            </div>
+
+          </div>
+
         </div>
       </section>

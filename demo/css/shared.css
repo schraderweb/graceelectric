@@ -200,17 +200,24 @@ a { text-decoration: none; }
 }
 
 .mobile-topbar-logo-link {
-  display: none !important;
+  display: block;
+  order: 2;
+  flex: 1;
+  text-align: center;
 }
 
 .mobile-topbar-logo {
-  max-height: 40px;
-  width: auto;
-  display: block;
-  border-radius: 50%;
+  height: 45px;
+  aspect-ratio: 1549 / 775;
+  display: inline-block;
+  background-color: #000; /* Black for light topbar */
+  -webkit-mask: url('/demo/images/logo-nav.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  mask: url('/demo/images/logo-nav.svg') no-repeat center;
+  mask-size: contain;
 }
 .mobile-topbar.navbar-scrolled .mobile-topbar-logo {
-  border-radius: 0;
+  background-color: #fff; /* White for dark topbar */
 }
 
 .topbar-phone-icon { 
@@ -220,13 +227,12 @@ a { text-decoration: none; }
   border-radius: 50%; 
   color: #fff !important; 
   text-decoration: none; 
-  order: 1; 
-  margin-right: auto; 
+  order: 3; 
   box-shadow: 0 2px 8px rgba(0,0,0,0.15); 
 }
 .topbar-phone-icon i { font-size: 15px; }
 
-.hamburger      { background: none; border: none; cursor: pointer; padding: 4px; display: flex; align-items: center; order: 3; }
+.hamburger      { background: none; border: none; cursor: pointer; padding: 4px; display: flex; align-items: center; order: 1; }
 .hamburger i    { font-size: 26px; color: #222; }
 
 .mobile-topbar.navbar-scrolled {
