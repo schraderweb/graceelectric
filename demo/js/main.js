@@ -182,14 +182,18 @@
 
   /* ── Sticky Navigation ── */
   const mainNav = document.querySelector('.main-nav');
-  if (mainNav) {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 20) {
-        mainNav.classList.add('navbar-scrolled');
-      } else {
-        mainNav.classList.remove('navbar-scrolled');
-      }
-    });
+  const mobileBar = document.querySelector('.mobile-topbar');
+
+  function toggleNavScroll() {
+    const hero = document.querySelector('.hero-section');
+    // Only switch to white navbar once user scrolls past the hero section
+    const threshold = hero ? Math.max(100, hero.offsetHeight - 100) : 100;
+    const scrolled = window.scrollY > threshold;
+    if (mainNav) mainNav.classList.toggle('navbar-scrolled', scrolled);
+    if (mobileBar) mobileBar.classList.toggle('navbar-scrolled', scrolled);
   }
+
+  window.addEventListener('scroll', toggleNavScroll);
+  toggleNavScroll();
 
 })();
