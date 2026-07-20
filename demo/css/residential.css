@@ -139,7 +139,7 @@
 
 /* Residential Hero */
 .residential-hero {
-  background: var(--color-white);
+  background: #FFFDF8;
   padding-top: calc(var(--nav-height) + 80px);
   padding-bottom: 80px;
 }
@@ -157,8 +157,10 @@
   height: 100%;
   max-height: 520px;
   object-fit: cover;
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 25%);
-  mask-image: linear-gradient(to right, transparent 0%, black 25%);
+  border-radius: 24px;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 65%);
+  mask-image: linear-gradient(to right, transparent 0%, black 65%);
+  transform: translateX(30px);
 }
 
 /* Phase 3 - Services Grid */
