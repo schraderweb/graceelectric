@@ -93,6 +93,7 @@ a { text-decoration: none; }
 }
 
 .nav-btn {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 7px;
@@ -107,12 +108,38 @@ a { text-decoration: none; }
   user-select: none;
   background: none;
   border: none;
-  border-bottom: 3px solid transparent;
   outline: none;
   letter-spacing: .01em;
   text-shadow: 0 1px 4px rgba(0,0,0,0.6);
   transition: all .3s ease;
 }
+
+.nav-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  border-radius: 999px;
+  background: #F4B400;
+  box-shadow: 0 0 12px rgba(244,180,0,.55);
+  opacity: 0;
+  transition: width .25s ease, opacity .25s ease;
+}
+
+.nav-btn:hover::after,
+.nav-btn.active::after {
+  width: 42px;
+  opacity: 1;
+}
+
+.nav-btn.active {
+  font-weight: 600;
+  color: #F4B400 !important;
+}
+
 .nav-btn:hover { background: var(--color-bg-hover-nav); }
 
 .nav-phone-link {
