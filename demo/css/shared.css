@@ -455,3 +455,59 @@ a { text-decoration: none; }
   .business-hours li { flex-direction: column; gap: 2px; }
   .copyright-bar p, .copyright-bar a { font-size: 1.05rem; }
 }
+
+/* Phase 6 CTA Banner */
+.cta-banner {
+  background-color: #FFF8EA;
+  border-radius: 18px;
+  padding: 48px;
+}
+.cta-banner h2 {
+  color: var(--color-primary-dark);
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+.cta-banner p {
+  color: var(--color-text-body);
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+.cta-banner-btn-primary {
+  background: var(--color-accent);
+  color: var(--color-primary-dark);
+  font-weight: 700;
+  padding: 14px 28px;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: all .2s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  font-size: 1.1rem;
+}
+.cta-banner-btn-primary:hover {
+  background: var(--color-accent-glow);
+  transform: translateY(-2px);
+  color: var(--color-primary-dark);
+}
+.cta-banner-phone {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-primary-dark);
+  font-weight: 800;
+  font-size: 1.25rem;
+  text-decoration: none;
+  transition: color .2s;
+}
+.cta-banner-phone:hover {
+  color: var(--color-primary);
+}
+
+@media (max-width: 575.98px) {
+  .cta-banner {
+    padding: 32px 24px;
+  }
+  .cta-banner-btn-primary {
+    width: 100%;
+    text-align: center;
+  }
+}
