@@ -143,3 +143,12 @@
   mask-image: linear-gradient(to right, transparent 0%, black 65%);
   transform: translateX(30px);
 }
+
+@media (max-width: 991.98px) {
+  .contact-hero-img {
+    -webkit-mask-image: none;
+    mask-image: none;
+    transform: none;
+    height: 300px; /* More appropriate height for mobile */
+  }
+}

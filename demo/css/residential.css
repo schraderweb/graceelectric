@@ -160,6 +160,15 @@
   transform: translateX(30px);
 }
 
+@media (max-width: 991.98px) {
+  .residential-hero-img {
+    -webkit-mask-image: none;
+    mask-image: none;
+    transform: none;
+    height: 400px; /* More appropriate height for mobile */
+  }
+}
+
 /* Phase 3 - Services Grid */
 .service-card-new {
   background: var(--color-white);
