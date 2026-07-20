@@ -171,12 +171,9 @@
       <!-- Left Content -->
       <div class="col-lg-4 col-12 order-2 order-lg-1">
         <div class="hero-content ps-lg-4">
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="/demo/" class="text-secondary text-decoration-none">Home</a></li>
-              <li class="breadcrumb-item active text-accent fw-bold" aria-current="page">Residential</li>
-            </ol>
-          </nav>
+
+          <!-- Spacer to maintain text position on desktop since breadcrumb is removed -->
+          <div class="d-none d-lg-block mb-3" style="height: 24px;"></div>
 
           <h1 class="hero-title mb-3 text-dark fw-bold">
             Residential Electrical <br /><span class="text-accent">Services</span>
@@ -194,6 +191,14 @@
 
       <!-- Right Content -->
       <div class="col-lg-8 col-12 order-1 order-lg-2 mb-4 mb-lg-0 mt-4 mt-lg-0">
+        
+        <nav aria-label="breadcrumb" class="d-lg-none mb-3 ps-2">
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="/demo/" class="text-secondary text-decoration-none">Home</a></li>
+            <li class="breadcrumb-item active text-accent fw-bold" aria-current="page">Residential</li>
+          </ol>
+        </nav>
+
         <div class="hero-image-wrapper pe-lg-3">
           <img src="/demo/images/residential-hero-image.webp" alt="Residential Electrical Services"
             class="img-fluid residential-hero-img">
