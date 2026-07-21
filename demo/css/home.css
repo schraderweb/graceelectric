@@ -81,7 +81,8 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-bottom: 28px;
+    margin-top: 24px;
+    margin-bottom: 40px;
   }
 
   .btn-mobile-call {
