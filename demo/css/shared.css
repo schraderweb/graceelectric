@@ -45,6 +45,10 @@ a { text-decoration: none; }
 .text-accent { color: var(--color-accent) !important; }
 .text-dark { color: var(--color-primary) !important; }
 
+/* Hero logo (shared across pages) */
+.logo { width: 150px; height: 150px; border-radius: var(--radius-full); background-color: var(--color-overlay); background-size: cover; background-position: center; margin-bottom: 20px; border: 3px solid rgba(255,255,255,0.35); box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.logo-wrapper { display: flex; justify-content: flex-start; margin-top: 0; margin-left: 25px; margin-bottom: 30px; }
+
 .main-nav {
   position: fixed;
   top: 0; left: 0; right: 0;
