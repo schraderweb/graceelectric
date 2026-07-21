@@ -224,6 +224,6 @@ a.contact-text:hover {
     overflow: visible;
   }
   .contact-hero-desktop { display: none !important; }
-  .contact-hero-mobile  { display: block; }
+  .contact-hero-mobile  { display: block; padding-top: var(--mobile-nav-height); }
 }
 

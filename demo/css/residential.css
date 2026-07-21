@@ -155,7 +155,7 @@
     padding-bottom: 40px;
   }
   .res-hero-desktop { display: none !important; }
-  .res-hero-mobile  { display: block; }
+  .res-hero-mobile  { display: block; padding-top: var(--mobile-nav-height); }
 }
 
 .residential-hero-img {
