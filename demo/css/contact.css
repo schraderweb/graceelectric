@@ -227,3 +227,57 @@ a.contact-text:hover {
   .contact-hero-mobile  { display: block; padding-top: var(--mobile-nav-height); }
 }
 
+/* Mobile fixed bottom CTA */
+.contact-mobile-cta {
+  display: none;
+}
+
+@media (max-width: 991.98px) {
+  .contact-mobile-cta {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    transition: opacity .35s ease, transform .35s ease;
+  }
+
+  .contact-mobile-cta.cta-hidden {
+    opacity: 0;
+    transform: translateY(100%);
+    pointer-events: none;
+  }
+
+  .contact-mobile-cta-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 14px 20px;
+    background: var(--color-accent);
+    color: #000;
+    font-weight: 800;
+    font-size: 1rem;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+    transition: background .2s;
+  }
+
+  .contact-mobile-cta-link:hover {
+    background: var(--color-accent-glow);
+    color: #000;
+  }
+
+  .contact-mobile-cta-link i {
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+
+  body {
+    padding-bottom: 56px;
+  }
+}
+

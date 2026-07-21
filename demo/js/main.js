@@ -253,6 +253,20 @@
   window.addEventListener('scroll', toggleNavScroll);
   toggleNavScroll();
 
+  /* ── Contact page mobile CTA auto-hide ── */
+  (function() {
+    const cta = document.querySelector('.contact-mobile-cta');
+    const form = document.getElementById('contact-form-mobile');
+    if (!cta || !form) return;
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        cta.classList.toggle('cta-hidden', entry.isIntersecting);
+      });
+    }, { rootMargin: '0px' });
+    observer.observe(form);
+  })();
+
   /* ── Form Submission ── */
   document.querySelectorAll('#appointmentForm').forEach(form => {
     form.addEventListener('submit', async function(e) {
