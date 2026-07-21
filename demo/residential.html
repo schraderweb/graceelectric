@@ -102,7 +102,7 @@
     }
     </script>
   </head>
-  <body>
+  <body class="page-residential">
 
 <!-- END: _head-residential.html -->
 <!-- START: _nav.html -->
@@ -170,48 +170,78 @@
 <!-- END: _nav.html -->
 <!-- START: _hero-residential.html -->
 <section class="residential-hero" id="home">
-  <div class="container-fluid hero-inner">
-    <div class="row align-items-center gx-4">
 
-      <!-- Left Content -->
-      <div class="col-lg-4 col-12 order-2 order-lg-1">
-        <div class="hero-content ps-lg-4">
-
-          <!-- Spacer to maintain text position on desktop since breadcrumb is removed -->
-          <div class="d-none d-lg-block mb-3" style="height: 24px;"></div>
-
-          <h1 class="hero-title mb-3 text-dark fw-bold">
-            Residential Electrical <br /><span class="text-accent">Services</span>
-          </h1>
-
-          <p class="hero-description mb-4 text-secondary fs-5">
-            Safe, reliable, and code-compliant electrical solutions designed for your home and your peace of mind.
-          </p>
-
-          <a href="/demo/contact.html#appointmentForm" class="btn btn-cta d-inline-flex align-items-center gap-2 text-dark fs-6 py-3 px-4">
-            BOOK AN APPOINTMENT <i class="bi bi-arrow-right"></i>
-          </a>
+  <!-- ===== DESKTOP LAYOUT (full-bleed hero like homepage) ===== -->
+  <div class="res-hero-desktop">
+    <div class="res-hero-bg">
+      <img src="/demo/images/residential-hero-image.webp" alt="" class="res-hero-bg-img" />
+    </div>
+    <div class="res-hero-overlay"></div>
+    <div class="container-fluid res-hero-inner">
+      <div class="row align-items-center" style="min-height: inherit;">
+        <div class="col-lg-7 col-md-8">
+          <div class="res-hero-content-desktop">
+            <h1 class="res-hero-title-desktop">
+              Residential Electrical <br /><span class="text-accent">Services</span>
+            </h1>
+            <p class="res-hero-subtitle-desktop">
+              Safe, reliable, and code-compliant electrical solutions designed for your home and your peace of mind.
+            </p>
+            <a href="/demo/contact.html#appointmentForm" class="btn btn-cta d-inline-flex align-items-center gap-2 fs-6 py-3 px-4">
+              BOOK AN APPOINTMENT <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
-
-      <!-- Right Content -->
-      <div class="col-lg-8 col-12 order-1 order-lg-2 mb-4 mb-lg-0">
-        
-        <nav aria-label="breadcrumb" class="d-lg-none mb-3 ps-2">
-          <ol class="breadcrumb mb-0">
-            <li class="breadcrumb-item"><a href="/demo/" class="text-secondary text-decoration-none">Home</a></li>
-            <li class="breadcrumb-item active text-accent fw-bold" aria-current="page">Residential</li>
-          </ol>
-        </nav>
-
-        <div class="hero-image-wrapper pe-lg-3">
-          <img src="/demo/images/residential-hero-image.webp" alt="Residential Electrical Services"
-            class="img-fluid residential-hero-img">
-        </div>
-      </div>
-
     </div>
   </div>
+
+  <!-- ===== MOBILE LAYOUT (unchanged – side-by-side card style) ===== -->
+  <div class="res-hero-mobile">
+    <div class="container-fluid hero-inner">
+      <div class="row align-items-center gx-4">
+
+        <!-- Left Content -->
+        <div class="col-lg-4 col-12 order-2 order-lg-1">
+          <div class="hero-content ps-lg-4">
+
+            <!-- Spacer to maintain text position on desktop since breadcrumb is removed -->
+            <div class="d-none d-lg-block mb-3" style="height: 24px;"></div>
+
+            <h1 class="hero-title mb-3 text-dark fw-bold">
+              Residential Electrical <br /><span class="text-accent">Services</span>
+            </h1>
+
+            <p class="hero-description mb-4 text-secondary fs-5">
+              Safe, reliable, and code-compliant electrical solutions designed for your home and your peace of mind.
+            </p>
+
+            <a href="/demo/contact.html#appointmentForm" class="btn btn-cta d-inline-flex align-items-center gap-2 text-dark fs-6 py-3 px-4">
+              BOOK AN APPOINTMENT <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Content -->
+        <div class="col-lg-8 col-12 order-1 order-lg-2 mb-4 mb-lg-0">
+          
+          <nav aria-label="breadcrumb" class="d-lg-none mb-3 ps-2">
+            <ol class="breadcrumb mb-0">
+              <li class="breadcrumb-item"><a href="/demo/" class="text-secondary text-decoration-none">Home</a></li>
+              <li class="breadcrumb-item active text-accent fw-bold" aria-current="page">Residential</li>
+            </ol>
+          </nav>
+
+          <div class="hero-image-wrapper pe-lg-3">
+            <img src="/demo/images/residential-hero-image.webp" alt="Residential Electrical Services"
+              class="img-fluid residential-hero-img">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
 </section>
 <!-- END: _hero-residential.html -->
 <!-- START: _content-residential.html -->
