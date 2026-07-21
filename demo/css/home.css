@@ -131,7 +131,7 @@
   /* Contact Info Cards Bar */
   .hero-mobile-info-bar {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr;
     gap: 0;
     background: #f7f7f7;
     border-top: 1px solid #eee;
@@ -139,12 +139,19 @@
   }
 
   .info-card-mobile {
-    text-align: center;
-    padding: 20px 8px 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-align: left;
+    padding: 16px 20px;
     position: relative;
-    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
   }
-  .info-card-mobile:last-child { border-right: none; }
+  .info-card-mobile:last-child { border-bottom: none; }
+  .info-card-mobile .info-card-icon { margin: 0; flex-shrink: 0; }
+  .info-card-mobile h6 { margin-bottom: 2px; }
+  .info-card-mobile p { font-size: 0.7rem; }
+  .info-card-arrow { margin-left: auto; }
 
   .info-card-icon {
     width: 40px;
