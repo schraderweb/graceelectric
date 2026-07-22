@@ -6,9 +6,9 @@ const { Resend } = require('resend');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-const RESEND_API_KEY = 're_cw1wvd7h_2bgSiDJ6YXqh23HDqEJqUnCN';
-const FROM_EMAIL = 'Grace-electric@fastgrowth.top';
-const TO_EMAIL = 'bret@schrader.co';
+const RESEND_API_KEY = process.env.RESEND_API_KEY || 're_BxkPpwys_AFotWm9GQ976foLnBt2SHMRa';
+const FROM_EMAIL = process.env.FROM_EMAIL || 'Grace-electric@fastgrowth.top';
+const TO_EMAIL = process.env.TO_EMAIL || 'bret@schrader.co';
 
 const resend = new Resend(RESEND_API_KEY);
 
