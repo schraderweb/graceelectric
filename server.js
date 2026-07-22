@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3001;
 
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
 const FROM_EMAIL = process.env.FROM_EMAIL || 'Grace-electric@fastgrowth.top';
-const TO_EMAIL = process.env.TO_EMAIL || 'bret@schrader.co';
+const TO_EMAILS = (process.env.TO_EMAILS || 'bret@schrader.co,graceelectric@hotmail.com').split(',').map(s => s.trim());
 const RESEND_API = 'https://api.resend.com/emails';
 
 app.use(express.json());
@@ -45,7 +45,7 @@ app.post('/api/send-enquiry', async (req, res) => {
       },
       body: JSON.stringify({
         from: FROM_EMAIL,
-        to: TO_EMAIL,
+        to: TO_EMAILS,
         subject: `New Enquiry from ${firstName} ${lastName}`,
         html,
       }),

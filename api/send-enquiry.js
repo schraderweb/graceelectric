@@ -11,7 +11,7 @@ module.exports = async (req, res) => {
   }
 
   const fromEmail = process.env.FROM_EMAIL || "Grace-electric@fastgrowth.top";
-  const toEmail = process.env.TO_EMAIL || "bret@schrader.co";
+  const toEmails = (process.env.TO_EMAILS || "bret@schrader.co,graceelectric@hotmail.com").split(",").map(s => s.trim());
 
   const body = typeof req.body === "object" ? req.body : {};
   const {
@@ -30,7 +30,7 @@ module.exports = async (req, res) => {
       },
       body: JSON.stringify({
         from: fromEmail,
-        to: toEmail,
+        to: toEmails,
         subject: `New Enquiry from ${firstName} ${lastName}`,
         html,
       }),
