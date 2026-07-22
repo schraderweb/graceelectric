@@ -232,10 +232,10 @@
   const desktopLogos = document.querySelectorAll('.nav-logo-img, .drawer-logo-img');
   const mobileLogo = document.querySelector('.mobile-topbar-logo');
 
-  const LOGO_DESKTOP_DEFAULT = '/demo/images/logo.webp';
-  const LOGO_DESKTOP_SCROLLED = '/demo/images/logo-nav.webp';
-  const LOGO_MOBILE_DEFAULT = '/demo/images/logo-nav-light.svg';
-  const LOGO_MOBILE_SCROLLED = '/demo/images/logo-nav-dark.svg';
+  const LOGO_DESKTOP_DEFAULT = '/images/logo.webp';
+  const LOGO_DESKTOP_SCROLLED = '/images/logo-nav.webp';
+  const LOGO_MOBILE_DEFAULT = '/images/logo-nav-light.svg';
+  const LOGO_MOBILE_SCROLLED = '/images/logo-nav-dark.svg';
 
   function toggleNavScroll() {
     const threshold = 50;

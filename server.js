@@ -11,7 +11,7 @@ const RESEND_API = 'https://api.resend.com/emails';
 
 app.use(express.json());
 
-app.use('/demo', express.static(path.join(__dirname, 'demo')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.post('/api/send-enquiry', async (req, res) => {
   try {
@@ -28,7 +28,7 @@ app.post('/api/send-enquiry', async (req, res) => {
 
     const values = { firstName, lastName, phone, email, zip, referral, message, appointment };
 
-    const templatePath = path.join(__dirname, 'demo', 'form-mail.html');
+    const templatePath = path.join(__dirname, 'public', 'form-mail.html');
     const fs = require('fs');
     let html = fs.readFileSync(templatePath, 'utf-8');
 
@@ -68,6 +68,6 @@ app.post('/api/send-enquiry', async (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
-  console.log(`Static files: http://localhost:${PORT}/demo/`);
+  console.log(`Static files: http://localhost:${PORT}/`);
   console.log(`API: http://localhost:${PORT}/api/send-enquiry`);
 });

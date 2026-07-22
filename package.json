@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "node demo/build.js",
+    "build": "node public/build.js",
     "server": "node server.js",
-    "start": "npm run build && (node server.js & browser-sync start --proxy 'localhost:3001' --files 'demo/**/*.html, demo/**/*.css, demo/**/*.js' --port 3000 --no-open)",
+    "start": "npm run build && (node server.js & browser-sync start --proxy 'localhost:3001' --files 'public/**/*.html, public/**/*.css, public/**/*.js' --port 3000 --no-open)",
     "dev": "npm run start"
   },
   "devDependencies": {

@@ -1,9 +1,6 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": "demo",
-  "rewrites": [
-    { "source": "/demo/:path*", "destination": "/:path*" }
-  ],
+  "outputDirectory": "public",
   "cleanUrls": true,
   "trailingSlash": false,
   "framework": null

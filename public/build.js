@@ -60,5 +60,5 @@ const pages = {
 for (const [filename, partials] of Object.entries(pages)) {
   const html = partials.map(partial).join('\n');
   fs.writeFileSync(path.join(out, filename), html);
-  console.log(`Built demo/${filename}`);
+  console.log(`Built public/${filename}`);
 }
