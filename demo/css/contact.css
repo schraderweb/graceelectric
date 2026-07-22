@@ -150,9 +150,9 @@ a.contact-text:hover {
   /* Desktop contact info row */
   .contact-info-desktop-row {
     display: flex;
-    gap: 32px;
-    flex-wrap: wrap;
-    margin-top: 8px;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 24px;
   }
 
   .contact-info-desktop-item {
