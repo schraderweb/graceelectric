@@ -35,10 +35,8 @@
             <div class="col-md-4 col-12 mt-4 mt-md-0">
                 <div class="form-container mt-5" id="contact">
                   <div class="appointment-card p-4">
-                  <p class="text-center mb-1 fw-semibold">Book Your</p>
-                  <div class="text-center mb-3">
-                    <span class="appointment-pill d-inline-block">Appointment Now</span>
-                  </div>
+                  <h3 class="fw-bold mb-2 text-white">Request Your Free Estimate</h3>
+                  <p class="mb-4" style="font-size: 0.95rem; color: rgba(255,255,255,0.85);">Fill out the form below and we'll get back to you quickly.</p>
                   <form id="appointmentForm" action="/api/send-enquiry" method="POST">
                     <div class="row g-2">
                       <div class="col-6">
@@ -73,13 +71,7 @@
                     <div class="mt-2">
                       <textarea class="form-control rounded-input" rows="4" placeholder="How Can We Help You?" aria-label="How Can We Help You?" name="message"></textarea>
                     </div>
-                    <div class="mt-2">
-                      <select class="form-select rounded-input" aria-label="Book An Appointment?" name="appointment">
-                        <option value="" selected disabled>Book An Appointment?</option>
-                        <option value="yes">Yes</option>
-                        <option value="no">No (Reach Out To Schedule)</option>
-                      </select>
-                    </div>
+
                     <div class="mt-3">
                       <button type="submit" class="btn btn-danger w-100 btn-cta">START BOOKING NOW</button>
                     </div>
@@ -159,13 +151,7 @@
                   <div class="mt-3">
                     <textarea class="form-control rounded-input py-2" rows="3" placeholder="How Can We Help You?" aria-label="How Can We Help You?" name="message"></textarea>
                   </div>
-                  <div class="mt-3">
-                    <select class="form-select rounded-input py-2" aria-label="Book An Appointment?" name="appointment">
-                      <option value="" selected disabled>Book An Appointment?</option>
-                      <option value="yes">Yes</option>
-                      <option value="no">No (Reach Out To Schedule)</option>
-                    </select>
-                  </div>
+
                   <div class="mt-4">
                     <button type="submit" class="btn w-100 fw-bold py-3 btn-mobile-submit">SEND REQUEST</button>
                   </div>
