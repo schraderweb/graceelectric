@@ -33,7 +33,7 @@
     padding-bottom: 0;
     overflow: hidden;
   }
-  .hero__bg, .hero__overlay { display: none; }
+  .hero__bg { display: none; }
   .hero__inner {
     padding-top: var(--mobile-nav-height);
     padding-left: 0;
