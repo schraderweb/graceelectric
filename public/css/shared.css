@@ -414,6 +414,78 @@ a { text-decoration: none; }
   line-height: 1.8;
 }
 
+/* ---------- Service area map ---------- */
+.map-sec {
+  background-color: var(--color-bg-light);
+  padding: 64px 0;
+}
+.map-sec-head {
+  max-width: 820px;
+  margin: 0 auto 32px;
+  text-align: center;
+}
+.map-sec-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 7px 14px;
+  border-radius: var(--radius-pill);
+  margin-bottom: 16px;
+}
+.map-sec-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin: 0 0 10px;
+}
+.map-sec-sub {
+  color: var(--color-text-body);
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0;
+}
+.map-frame {
+  position: relative;
+  line-height: 0;
+}
+.service-map {
+  display: block;
+  width: 100%;
+  height: 520px;
+  border: 0;
+}
+.map-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px 32px;
+  margin-top: 22px;
+}
+.map-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-text-body);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+}
+a.map-meta-item:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+.map-meta-item i {
+  color: var(--color-accent);
+  font-size: 1rem;
+}
+
 .footer-main         { background-color: #2A2A28; font-family: 'Inter', 'Segoe UI', Arial, sans-serif; color: var(--color-text-light) !important; padding: 72px 0 0; }
 .footer-main p       { color: rgba(255,255,255,0.85); font-size: 1.1rem; }
 .footer-heading      { font-size: 1.3rem; font-weight: 700; color: var(--color-white) !important; text-transform: uppercase; letter-spacing: 0.08em; position: relative; padding-bottom: 8px; margin-bottom: 18px; }
@@ -464,6 +536,13 @@ a { text-decoration: none; }
 
   .serving-areas-sec { padding: 40px 0; }
   .serving-areas-sec h3 { font-size: 22px; }
+  .map-sec { padding: 40px 0; }
+  .map-sec-head { margin-bottom: 24px; }
+  .map-sec-title { font-size: 22px; }
+  .map-sec-sub { font-size: 15px; }
+  .service-map { height: 400px; }
+  .map-meta { gap: 10px 20px; }
+  .map-meta-item { font-size: 14px; }
   .footer-main img   { max-height: 120px !important; }
   .footer-phone-cta  { font-size: 1.05rem; padding: 10px 18px; }
   .footer-phone-cta i { font-size: 16px; }
