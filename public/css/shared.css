@@ -417,7 +417,7 @@ a { text-decoration: none; }
 /* ---------- Service area map ---------- */
 .map-sec {
   background-color: var(--color-bg-light);
-  padding: 48px 0;
+  padding: 48px 0 0;
 }
 .map-sec-sub {
   color: var(--color-text-body);
@@ -425,19 +425,13 @@ a { text-decoration: none; }
   line-height: 1.7;
   margin: 0 0 28px;
 }
-.map-card {
-  background-color: var(--color-white);
-  border: 1px solid #e7e5e4;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-}
 .service-map {
   display: block;
   width: 100%;
-  height: 460px;
+  height: 520px;
   border: 0;
 }
-.map-card-bar {
+.map-bar {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -514,10 +508,10 @@ a.map-bar-item:hover {
 
   .serving-areas-sec { padding: 40px 0; }
   .serving-areas-sec h3 { font-size: 22px; }
-  .map-sec { padding: 40px 0; }
+  .map-sec { padding: 40px 0 0; }
   .map-sec-sub { font-size: 15px; margin-bottom: 20px; }
   .service-map { height: 400px; }
-  .map-card-bar { gap: 10px 20px; padding: 16px; }
+  .map-bar { gap: 10px 20px; padding: 16px; }
   .map-bar-item { font-size: 14px; }
   .footer-main img   { max-height: 120px !important; }
   .footer-phone-cta  { font-size: 1.05rem; padding: 10px 18px; }
